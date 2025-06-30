@@ -1,4 +1,4 @@
-import { className } from "~/Packages/Interface";
+import { className } from "./../Packages/Interface";
 import { IButton, TButtonSize, TButtonType } from "./interface";
 import classNames from "classnames";
 import { useMemo } from "react";

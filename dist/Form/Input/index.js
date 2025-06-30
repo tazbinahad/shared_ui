@@ -13,7 +13,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import classNames from "classnames";
 import { useRef, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { IconCheck, IconEye, IconEyeOff } from "~/Packages/Icons";
+import { IconCheck, IconEye, IconEyeOff } from "../../Packages/Icons";
 // Utility function to generate a unique ID
 var generateUniqueId = function () {
     return "input-".concat(Date.now(), "-").concat(Math.floor(Math.random() * 10000));
@@ -49,7 +49,7 @@ export var Input = function (inputProps) {
         }, commonStyle), children: [prefix && _jsx("span", { children: prefix }), _jsx("input", __assign({}, fieldProps, { id: idRef.current, ref: inputRef, type: isPassword && isPasswordVisible ? "text" : type, className: classNames("w-full bg-transparent outline-none", elSize[inputSize], {
                     "sr-only": isCheckbox,
                     "rounded-r-none": isPassword,
-                }), autoComplete: type, checked: isCheckbox ? fieldProps.checked : undefined, placeholder: fieldProps.placeholder, prefix: "" })), isCheckbox && (_jsx("label", { className: classNames("flex h-4 w-4 cursor-pointer items-center justify-center rounded border border-transparent p-0.5"), htmlFor: idRef.current, children: fieldProps.checked && (_jsx(IconCheck, { className: "fill-text-color" })) })), isPassword && (_jsx("span", { className: "flex h-full w-auto cursor-pointer items-center px-1.5", onClick: togglePasswordVisibility, children: isPasswordVisible ? (_jsx(IconEyeOff, { height: 18, width: 18 })) : (_jsx(IconEye, { height: 18, width: 18 })) })), suffix && _jsx("span", { children: suffix })] })); };
+                }), autoComplete: type, checked: isCheckbox ? fieldProps.checked : undefined, placeholder: fieldProps.placeholder, prefix: "" })), isCheckbox && (_jsx("label", { className: classNames("flex h-4 w-4 cursor-pointer items-center justify-center rounded border border-transparent p-0.5"), htmlFor: idRef.current, children: fieldProps.checked && _jsx(IconCheck, { className: "fill-text-color" }) })), isPassword && (_jsx("span", { className: "flex h-full w-auto cursor-pointer items-center px-1.5", onClick: togglePasswordVisibility, children: isPasswordVisible ? (_jsx(IconEyeOff, { height: 18, width: 18 })) : (_jsx(IconEye, { height: 18, width: 18 })) })), suffix && _jsx("span", { children: suffix })] })); };
     return (_jsxs("div", { className: classNames("flex gap-1", {
             "cursor-pointer flex-row-reverse items-center justify-end": isCheckbox,
             "flex-col": !isCheckbox,

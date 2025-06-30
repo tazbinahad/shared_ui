@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import { FC, useRef, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { IconCheck, IconEye, IconEyeOff } from "~/Packages/Icons";
+import { IconCheck, IconEye, IconEyeOff } from "../../Packages/Icons";
 import { IInputProps, TInputSize } from "../interface";
-import { className } from "~/Packages/Interface";
+import { className } from "../../Packages/Interface";
 
 // Utility function to generate a unique ID
 const generateUniqueId = () =>
@@ -60,7 +60,7 @@ export const Input: FC<IInputProps> = (inputProps) => {
           "justify-between": isPassword,
           "flex-row-reverse items-center justify-end gap-2": isCheckbox,
         },
-        commonStyle,
+        commonStyle
       )}
     >
       {prefix && <span>{prefix}</span>}
@@ -75,7 +75,7 @@ export const Input: FC<IInputProps> = (inputProps) => {
           {
             "sr-only": isCheckbox,
             "rounded-r-none": isPassword,
-          },
+          }
         )}
         autoComplete={type}
         checked={isCheckbox ? fieldProps.checked : undefined} // Handle checked for checkbox
@@ -85,13 +85,11 @@ export const Input: FC<IInputProps> = (inputProps) => {
       {isCheckbox && (
         <label
           className={classNames(
-            "flex h-4 w-4 cursor-pointer items-center justify-center rounded border border-transparent p-0.5",
+            "flex h-4 w-4 cursor-pointer items-center justify-center rounded border border-transparent p-0.5"
           )}
           htmlFor={idRef.current}
         >
-          {fieldProps.checked && (
-            <IconCheck className="fill-text-color" />
-          )}
+          {fieldProps.checked && <IconCheck className="fill-text-color" />}
         </label>
       )}
       {isPassword && (
@@ -118,7 +116,7 @@ export const Input: FC<IInputProps> = (inputProps) => {
             isCheckbox,
           "flex-col": !isCheckbox,
         },
-        className,
+        className
       )}
     >
       {label && (

@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { useToastStore } from "~/Packages/Hooks/useToast";
+import { useToastStore } from "./../Packages/Hooks/useToast";
 import {
   XMarkIcon,
   InformationCircleIcon,

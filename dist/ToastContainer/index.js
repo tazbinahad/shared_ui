@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { createPortal } from "react-dom";
-import { useToastStore } from "~/Packages/Hooks/useToast";
+import { useToastStore } from "./../Packages/Hooks/useToast";
 import { XMarkIcon, InformationCircleIcon, CheckCircleIcon, ExclamationCircleIcon, } from "@heroicons/react/24/solid";
 // Icon mapping for each toast type
 var toastIcons = {
